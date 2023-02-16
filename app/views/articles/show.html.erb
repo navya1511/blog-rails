@@ -1,0 +1,28 @@
+<h1 style="text-align:center;"> Article <%= @article.id %></h1>
+<br>
+<h1 style="color:blue;"><strong>Title:</strong>
+<%= @article.title %>
+</h1>
+<br>
+
+<p>
+<strong>Text:</strong>
+<%= @article.body %>
+</p>
+
+<br>
+
+<h2>Comments</h2>
+<%= render @article.comments%>
+
+
+
+<h2>Add comment:</h2>
+
+<%= render 'comments/form'%>
+<br>
+
+
+  <%= link_to "Edit", edit_article_path(@article) ,style: "font-size:20px;" %> | |
+  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } , style: "font-size:20px;"%> | |
+  <%= link_to 'Back', articles_path ,style: "font-size:20px;"%>

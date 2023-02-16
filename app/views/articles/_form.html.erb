@@ -1,0 +1,26 @@
+
+<%= form_with model: article do |f|%>
+<div class="field">
+<%= f.label :title %><br>
+<%= f.text_field :title %>
+<% article.errors.full_messages_for(:title).each do |messsage|%>
+  <div><%= messsage %></div>
+<% end %>
+</div>
+<div class="field">
+<%= f.label :body%><br>
+<%= f.text_area :body%>
+<% article.errors.full_messages_for(:body).each do |m|%>
+<div><%= m %></div>
+<% end %>
+</div>
+<div class="field">
+  <%= f.label :status %><br>
+  <%= f.select :status, ['public', 'private', 'archived'], selected: 'public' , class: 'select_field' %>
+</div>
+<br>
+
+<%= f.submit :class => 'btn'%>
+
+
+<% end %>

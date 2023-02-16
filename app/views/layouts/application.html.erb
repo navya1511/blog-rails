@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div id="menu">
+	
+		<div id="menutop">
+
+		
+		<%# <div class="navcontainer">
+			<ul class="navlist">
+				<li><a title="link one" href="index.html">home</a></li>
+				<li><a title="link two" href="index.html">link two</a></li>
+				<li><a title="link three" href="index.html">link three</a></li>
+				<li><a title="link four" href="index.html">link four</a></li>
+				<li><a title="link five" href="index.html">link five</a></li>
+				<li><a title="link six" href="index.html">link six</a></li>
+				<li><a title="link seven" href="index.html">link seven</a></li>
+				<li><a title="link eight" href="index.html">link eight</a></li>
+			</ul>
+			<br />
+		</div>
+		</div> %>
+
+	</div>
+	
+	<div id="maincontainer">
+	<%= yield %>
+	</div>
+	<%# <div id="footer">
+		<p>Copyright 2006 &copy; deine Firmen Infos | Layout 2006 &copy; by <a href="http://www.kraft-tiger.de">www.kraft-tiger.de</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">css</a> | <a href="http://validator.w3.org/check?uri=referer">xhtml</a></p>
+	</div> %>
+  
+  </body>
+</html>
